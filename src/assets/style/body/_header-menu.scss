@@ -1,0 +1,30 @@
+@use "../presets/variables" as *;
+@use "../mixin/media_mixin" as *;
+@use "../common/function" as *;
+
+
+.navbar {
+
+}
+.menu {
+  &__list {
+    display: flex;
+    gap: vw(90);
+    padding-top: vw(28);
+    padding-bottom: vw(24);
+    &-item {}
+    &-link {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: vw(12);
+      line-height: vw(16);
+      letter-spacing: 0.15em;
+      color: $color-text;
+      display: block;
+      transition: 0.2s;
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+}

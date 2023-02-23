@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script defer src="assets/js/mask.js"></script>
+    <script defer src="assets/js/modal-map.js"></script>
+    <script defer src="assets/js/modal-callback.js"></script>
+    <script defer src="assets/js/index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section class="page-wrapper">
+        <div class="modal-google">
+            <iframe class="modal-google__map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1881.7300220683403!2d37.51575038245189!3d55.884062512750646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0JDQtNGA0LXRgSDQsNCy0YLQvtGG0LXQvdGC0YDQsDog0JzQvtGB0LrQstCwLCDQqNC-0YHRgdC10LnQvdGL0Lkg0L_RgNC-0LXQt9C0LCDRgTQg0LAvMg!5e0!3m2!1sru!2sge!4v1677166492208!5m2!1sru!2sge"
+                    style="border:0;"
+                    allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="modal-callback">
+            <div class="modal-callback__box">
+                <div class="modal-callback__box-trigger"></div>
+                <p class="modal-callback__title">Быстро оставить заявку</p>
+                <p class="modal-callback__description">Введите номер — позвоним вам
+                    в течение 5-10 минут в рабочее время</p>
+                <form action="" class="modal-callback__form form">
+                    <label class="form-label" for="phone">Введите ваш номер телефона</label>
+                    <input id="phone" type="text" class="form-control form-btn" placeholder="+ 7 (_ _ _) _ _ _ - _ _ - _ _">
+                    <button class="form-submit form-btn" type="submit">Перезвоните мне</button>
+                    <div class="form-wrapper">
+                        <input class="checkbox-input" type="checkbox" name="checkbox" id="checkbox">
+                        <label class="checkbox-label" for="checkbox">Нажимая кнопку вы соглашаетесь  с условиями
+                            <a href="#" class="checkbox-link">Политики конфиденциальности</a>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="scroll"></div>
+            <header class="header">
+                <div class="header__wrapper">
+                    <div class="header__logo">
+                        <div class="header__logo-image"></div>
+                        <p class="header__logo-description">Ремонтируем двигатели
+                            Hyundai и Kia с 2012 года </p>
+                    </div>
+                    <div class="header__contact contact">
+                        <ul class="contact__list">
+                            <li class="contact__item">
+                                <div class="item-image item-image--map"></div>
+                                <address class="item-description">Адрес автоцентра: Москва, Шоссейный
+                                    проезд, с4 а/2</address>
+                            </li>
+                            <li class="contact__item contact__item--map item">
+                                <div class="item-image item-image--vector"></div>
+                                <div class="item-wrapper">
+                                    <div class="hover">
+                                        <p class="item-description item-description--vector">Смотреть на карте</p>
+                                        <div class="underline__dots"></div>
+                                        <iframe class="item-map"
+                                                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1881.7300220683403!2d37.51575038245189!3d55.884062512750646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0JDQtNGA0LXRgSDQsNCy0YLQvtGG0LXQvdGC0YDQsDog0JzQvtGB0LrQstCwLCDQqNC-0YHRgdC10LnQvdGL0Lkg0L_RgNC-0LXQt9C0LCDRgTQg0LAvMg!5e0!3m2!1sru!2sge!4v1677166492208!5m2!1sru!2sge"
+                                                width="400" height="300" style="border:0;"
+                                                allowfullscreen="" loading="lazy"
+                                                referrerpolicy="no-referrer-when-downgrade">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact__item item">
+                                <div class="item-image item-image--calc"></div>
+                                <div class="item-wrapper">
+                                    <a class="item-wrapper__link" href="#">
+                                        <p class="item-description item-description--calc">Расчитать стоимость</p>
+                                        <div class="underline__dots"></div>
+                                        <p class="item-description item-description--calc">ремонта за 45 сек</p>
+                                        <div class="underline__dots"></div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="contact__item item">
+                                <p class="item-description item-description--social">Задайте вопрос,
+                                    мы сейчас онлайн</p>
+                                <div class="item-box">
+                                    <a class="item-box__link" href="#">
+                                        <div class="item-image item-image--whatsapp"></div>
+                                    </a>
+                                    <a class="item-box__link" href="#">
+                                        <div class="item-image item-image--telegram"></div>
+                                    </a>
+                                    <a class="item-box__link" href="#">
+                                        <div class="item-image item-image--viber"></div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__callback callback">
+                        <p class="callback__title">Звоните Пн-Сб 10:00 - 21:00</p>
+                        <div class="callback__phone">
+                            <a href="tel:+79251033330" class="callback__link">+7 (925) 103 33 30</a>
+                        </div>
+                        <div class="callback__call">
+                            <div class="callback__box">
+                                <p class="callback__call-description">Заказать звонок</p>
+                                <div class="callback__image"></div>
+                                <div class="underline__dots underline--dots--callback"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar">
+                    <menu class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__list-item"><a href="" class="menu__list-link">Главная</a></li>
+                            <li class="menu__list-item"><a href="" class="menu__list-link">услуги</a></li>
+                            <li class="menu__list-item"><a href="" class="menu__list-link">модели двигателей</a></li>
+                            <li class="menu__list-item"><a href="" class="menu__list-link">отзывы</a></li>
+                            <li class="menu__list-item"><a href="" class="menu__list-link">стоимость</a></li>
+                            <li class="menu__list-item"><a href="" class="menu__list-link">примеры работ</a></li>
+                            <li class="menu__list-item"><a href="" class="menu__list-link">полезные статьи</a></li>
+                            <li class="menu__list-item"><a href="" class="menu__list-link">о компании</a></li>
+                            <li class="menu__list-item"><a href="" class="menu__list-link">Контакты</a></li>
+                        </ul>
+                    </menu>
+                </nav>
+            </header>
+        </div>
+    </section>
+</body>
+</html>

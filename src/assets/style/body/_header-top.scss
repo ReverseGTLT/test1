@@ -1,0 +1,63 @@
+@use "../presets/variables" as *;
+@use "../mixin/media_mixin" as *;
+@use "../common/function" as *;
+
+.page-wrapper {
+  display: flex;
+  width: vw(1920);
+  position: relative;
+}
+
+.container {
+  max-width: vw(1640);
+  margin-inline: auto;
+  display: flex;
+}
+
+.header {
+  padding-top: vw(22);
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    border-bottom: vw(1) solid rgba($color-text, 0.15);
+    padding-bottom: vw(11);
+  }
+  &__logo {
+    display: flex;
+    gap: vw(23);
+    align-items: center;
+    padding-right: vw(65);
+    &-image {
+      width: vw(213);
+      height: vw(50);
+      background-image: url("../../image/logo.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &-picture {
+      width: 100%;
+    }
+    &-description {
+      font-size: vw(11);
+      line-height: 182%;
+      letter-spacing: 0.02em;
+      color: $color-text;
+      max-width: vw(134);
+    }
+  }
+  &__contact {}
+  &__callback {}
+}
+.contact {
+ &__list {
+   display: flex;
+   gap: vw(57);
+ }
+ &__item {
+   display: flex;
+   gap: vw(10);
+   align-items: center;
+ }
+}
+
+

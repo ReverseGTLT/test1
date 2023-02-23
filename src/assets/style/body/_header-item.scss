@@ -1,0 +1,92 @@
+@use "../presets/variables" as *;
+@use "../mixin/media_mixin" as *;
+@use "../common/function" as *;
+
+.item {
+  &-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: vw(35);
+    height: vw(35);
+    &--map {
+      background-image: url("../../image/map.svg");
+    }
+    &--vector {
+      width: vw(12);
+      height: vw(15);
+      background-image: url("../../image/vector.svg");
+    }
+    &--calc {
+      background-image: url("../../image/calc.svg");
+    }
+    &--whatsapp {
+      background-image: url("../../image/whatsapp.svg");
+    }
+    &--telegram {
+      background-image: url("../../image/telegram.svg");
+    }
+    &--viber {
+      background-image: url("../../image/viber.svg");
+    }
+    &__picture {
+      width: 100%;
+    }
+  }
+  &-description {
+    display: block;
+    font-style: normal;
+    font-size: vw(11);
+    line-height: 164%;
+    color: $color-text;
+    max-width: vw(157);
+    &--vector {
+      font-weight: 700;
+      font-size: vw(11);
+      line-height: vw(15);
+      letter-spacing: 0.05em;
+      color: $color-text;
+      cursor: pointer;
+    }
+    &--calc {
+      font-weight: 700;
+      font-size: vw(11);
+      line-height: vw(19);
+      letter-spacing: 0.05em;
+      color: $color-text;
+      cursor: pointer;
+    }
+    &--social {
+      font-weight: 400;
+      font-size: vw(11);
+      line-height: vw(18);
+      letter-spacing: 0.03em;
+      max-width: vw(100);
+      margin-right: vw(14);
+      margin-left: vw(26);
+    }
+  }
+  &-map {
+    position: absolute;
+    width: 0;
+    height: 0;
+    transition: 0.2s;
+  }
+  &-wrapper {
+    position: relative;
+    &:hover .underline__dots{
+      width: 60%;
+      background-size: vw(4) vw(2);
+    }
+    &:hover .item-map {
+      width: vw(400);
+      height: vw(350);
+      top: vw(32);
+      left: 0;
+      z-index: 1;
+    }
+  }
+  &-box {
+    display: flex;
+    gap: vw(6);
+  }
+}

@@ -1,0 +1,8 @@
+@use "../presets/variables" as *;
+@use "../mixin/media_mixin" as *;
+@use "../common/function" as *;
+
+.scroll {
+  //width: vw(140);
+  height: 100%;
+}

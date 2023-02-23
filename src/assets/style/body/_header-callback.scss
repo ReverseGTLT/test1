@@ -1,0 +1,90 @@
+@use "../presets/variables" as *;
+@use "../mixin/media_mixin" as *;
+@use "../common/function" as *;
+
+.callback {
+  margin-left: vw(57);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    font-size: vw(12);
+    line-height: vw(10);
+    letter-spacing: 0.02em;
+    position: relative;
+    padding-bottom: vw(15);
+    &::before {
+      position: absolute;
+      content: "";
+      width: vw(4);
+      height: vw(4);
+      border-radius: 50%;
+      background-color: $color-phone-indicator;
+      top: vw(4);
+      left: vw(-8);
+    }
+  }
+  &__phone {
+    padding-bottom: vw(6);
+  }
+  &__link {
+    font-weight: 700;
+    font-size: vw(20);
+    line-height: vw(10);
+    color: $color-text;
+    display: block;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: vw(7);
+      height: vw(7);
+      border-right: vw(1) solid $color-accent;
+      border-top: vw(1) solid $color-accent;
+      transform: rotateZ(135deg);
+      right: vw(-20);
+    }
+  }
+  &__call {
+    &-description {
+      font-size: vw(12);
+      line-height: vw(21);
+      letter-spacing: 0.05em;
+      grid-area: de;
+      margin-right: vw(10);
+    }
+  }
+  &__box {
+    display: grid;
+    grid-template-areas: "de im" "do do";
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover .underline__dots{
+      width: 60%;
+      background-size: vw(4) vw(2);
+    }
+  }
+  &__image {
+    grid-area: im;
+    width: vw(6);
+    height: vw(6);
+    background-image: url("../../image/phone.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__dots {}
+}
+
+.underline__dots {
+  width: 100%;
+  height: vw(10);
+  background-repeat: repeat-x;
+  background-image: url("../../image/dot.svg");
+  background-size: vw(6) vw(2);
+  transition: 0.2s;
+  margin-top: vw(4);
+  &--callback {
+    grid-area: do;
+  }
+}
