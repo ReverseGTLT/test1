@@ -46,11 +46,11 @@ a {
 }
 @media (max-width: 991.8px) {
   .header {
-    padding-top: 0;
     height: 17.1875vw;
     position: fixed;
     width: 100%;
     transition: 0.6s;
+    padding: 5vw 0 0 7.8125vw;
   }
 }
 .header__wrapper {
@@ -63,8 +63,6 @@ a {
   .header__wrapper {
     position: fixed;
     justify-content: space-between;
-    padding: 5vw 0 0 7.8125vw;
-    width: 80%;
   }
 }
 .header__logo {
@@ -635,6 +633,7 @@ a {
     font-size: 3.75vw;
     color: #fff;
     padding-block: 1.875vw;
+    line-height: 3.125vw;
   }
 }
 .callback__link::after {
@@ -1026,8 +1025,8 @@ a {
     display: block;
     height: 4.6875vw;
     position: absolute;
-    right: -10.9375vw;
-    top: 7.8125vw;
+    right: -14.0625vw;
+    top: 3.125vw;
     background-image: url("../../image/burger.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1094,6 +1093,7 @@ a {
   overflow-x: scroll;
   height: 100%;
   width: 100vw;
+  padding: 5vw 0 0 7.8125vw;
 }
 
 .burger-contacts__link {

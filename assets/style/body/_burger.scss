@@ -9,8 +9,8 @@
     display: block;
     height: vm(15);
     position: absolute;
-    right: vm(-35);
-    top: vm(25);
+    right: vm(-45);
+    top: vm(10);
     background-image: url('../../image/burger.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -76,6 +76,7 @@
   overflow-x: scroll;
   height: 100%;
   width: 100vw;
+  padding: vm(16) 0 0 vm(25);
 }
 
 .burger-contacts__link {
