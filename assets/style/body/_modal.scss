@@ -20,7 +20,7 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(#232323, 0.5);
-    z-index: 2;
+    z-index: 10;
     position: absolute;
     display: none;
     &__box {
@@ -35,6 +35,13 @@
       align-items: center;
       color: $color-white;
       position: relative;
+      @include lg {
+        padding-top: vm(70);
+        width: vm(320);
+        height: 100%;
+        margin-top: 0;
+
+      }
       &-trigger {
         position: absolute;
         background-image: url("../../image/cross.svg");
@@ -46,6 +53,12 @@
         top: vw(35);
         cursor: pointer;
         transition: 0.2s;
+        @include lg {
+          width: vm(20);
+          height: vm(20);
+          right: vm(35);
+          top: vm(35);
+        }
       }
     }
     &__title {
@@ -54,6 +67,11 @@
       line-height: vw(44);
       text-align: center;
       max-width: vw(282);
+      @include lg {
+        font-size: vm(32);
+        line-height: vm(44);
+        max-width: vm(282);
+      }
     }
     &__description {
       max-width: vw(363);
@@ -62,6 +80,13 @@
       text-align: center;
       color: $color-white;
       padding-top: vw(20);
+      @include lg {
+        max-width: vm(363);
+        font-size: vm(18);
+        line-height: vm(28);
+        padding-top: vm(20);
+        padding-inline: vm(25);
+      }
     }
   }
   &-success {
@@ -81,6 +106,9 @@
 .form {
   display: block;
   padding-inline: vw(68);
+  @include lg {
+    padding-inline: vm(68);
+  }
   &-label {
     font-size: vw(14);
     line-height: vw(19);
@@ -88,11 +116,22 @@
     padding-top: vw(34);
     display: block;
     text-align: center;
+    @include lg {
+      font-size: vm(14);
+      line-height: vm(19);
+      padding-bottom: vm(12);
+      padding-top: vm(34);
+    }
   }
   &-btn {
     width: vw(363);
     height: vw(85);
     border-radius: vw(73);
+    @include lg {
+      width: 100%;
+      height: vm(30);
+      border-radius: vm(73);
+    }
   }
   &-control {
     border: none;
@@ -103,6 +142,10 @@
     letter-spacing: 0.03em;
     text-align: center;
     color: #B0B0B1;
+    @include lg {
+      font-size: vm(12);
+      line-height: vm(24);
+    }
   }
   &-submit {
     background-color: $color-accent;
@@ -114,6 +157,11 @@
     margin-block: vw(25);
     cursor: pointer;
     transition: 0.2s;
+    @include lg {
+      font-size: vm(12);
+      line-height: vm(24);
+      margin-block: vm(25);
+    }
     &:hover {
       background-color: lighten($color-accent, 10%);
     }
@@ -132,17 +180,25 @@
   }
   &-input:checked + label {
     content: "";
-    padding-left: 28px;
-    line-height: 20px;
+    padding-left: vw(28);
+    line-height: vw(20);
     position: relative;
     cursor: pointer;
+    @include lg {
+      padding-left: vm(28);
+      line-height: vm(20);
+    }
   }
   &-input:not(:checked) + label {
     display: inline-block;
     position: relative;
-    padding-left: 28px;
-    line-height: 20px;
+    padding-left: vw(28);
+    line-height: vw(20);
     cursor: pointer;
+    @include lg {
+      padding-left: vm(28);
+        line-height: vm(20);
+    }
   }
   &-input:checked + label:before {
     content: "";
@@ -151,29 +207,45 @@
     background-size: auto;
     background-position: center;
     position: absolute;
-    left: 1px;
-    top: 11px;
+    left: vw(1);
+    top: vw(11);
     width: vw(20);
     height: vw(20);
     border: none;
     background-color: $color-accent;
     border-radius: 2px;
+    @include lg {
+      left: vm(1);
+      top: vm(11);
+      width: vm(20);
+      height: vm(20);
+    }
   }
   &-input:not(:checked) + label:before {
     content: "";
     position: absolute;
-    left: 1px;
-    top: 11px;
+    left: vw(1);
+    top: vw(11);
     width: vw(20);
     height: vw(20);
     border: 1px solid #fff;
     background-color: #ffffff;
-    border-radius: 2px;
+    border-radius: vw(2);
+    @include lg {
+      left: vm(1);
+      top: vm(11);
+      width: vm(20);
+      height: vm(20);
+    }
   }
   &-label {
     font-size: vw(14);
     line-height: vw(19);
     color: $color-white;
+    @include lg {
+      font-size: vm(14);
+      line-height: vm(19);
+    }
   }
   &-link {
     color: $color-accent;

@@ -20,7 +20,7 @@
   padding-top: vw(22);
   @include lg {
     padding-top: 0;
-    height: 119px;
+    height: vm(55);
     position: fixed;
     width: 100%;
     transition: 0.6s;

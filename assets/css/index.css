@@ -47,7 +47,7 @@ a {
 @media (max-width: 991.8px) {
   .header {
     padding-top: 0;
-    height: 119px;
+    height: 17.1875vw;
     position: fixed;
     width: 100%;
     transition: 0.6s;
@@ -213,7 +213,7 @@ a {
   width: 100vw;
   height: 100vh;
   background-color: rgba(35, 35, 35, 0.5);
-  z-index: 2;
+  z-index: 10;
   position: absolute;
   display: none;
 }
@@ -230,6 +230,14 @@ a {
   color: #fff;
   position: relative;
 }
+@media (max-width: 991.8px) {
+  .modal-callback__box {
+    padding-top: 21.875vw;
+    width: 100vw;
+    height: 100%;
+    margin-top: 0;
+  }
+}
 .modal-callback__box-trigger {
   position: absolute;
   background-image: url("../../image/cross.svg");
@@ -242,12 +250,27 @@ a {
   cursor: pointer;
   transition: 0.2s;
 }
+@media (max-width: 991.8px) {
+  .modal-callback__box-trigger {
+    width: 6.25vw;
+    height: 6.25vw;
+    right: 10.9375vw;
+    top: 10.9375vw;
+  }
+}
 .modal-callback__title {
   font-weight: 500;
   font-size: 1.6666666667vw;
   line-height: 2.2916666667vw;
   text-align: center;
   max-width: 14.6875vw;
+}
+@media (max-width: 991.8px) {
+  .modal-callback__title {
+    font-size: 10vw;
+    line-height: 13.75vw;
+    max-width: 88.125vw;
+  }
 }
 .modal-callback__description {
   max-width: 18.90625vw;
@@ -256,6 +279,15 @@ a {
   text-align: center;
   color: #fff;
   padding-top: 1.0416666667vw;
+}
+@media (max-width: 991.8px) {
+  .modal-callback__description {
+    max-width: 113.4375vw;
+    font-size: 5.625vw;
+    line-height: 8.75vw;
+    padding-top: 6.25vw;
+    padding-inline: 7.8125vw;
+  }
 }
 .modal-success {
   width: 100vw;
@@ -274,6 +306,11 @@ a {
   display: block;
   padding-inline: 3.5416666667vw;
 }
+@media (max-width: 991.8px) {
+  .form {
+    padding-inline: 21.25vw;
+  }
+}
 .form-label {
   font-size: 0.7291666667vw;
   line-height: 0.9895833333vw;
@@ -282,10 +319,25 @@ a {
   display: block;
   text-align: center;
 }
+@media (max-width: 991.8px) {
+  .form-label {
+    font-size: 4.375vw;
+    line-height: 5.9375vw;
+    padding-bottom: 3.75vw;
+    padding-top: 10.625vw;
+  }
+}
 .form-btn {
   width: 18.90625vw;
   height: 4.4270833333vw;
   border-radius: 3.8020833333vw;
+}
+@media (max-width: 991.8px) {
+  .form-btn {
+    width: 100%;
+    height: 9.375vw;
+    border-radius: 22.8125vw;
+  }
 }
 .form-control {
   border: none;
@@ -297,6 +349,12 @@ a {
   text-align: center;
   color: #B0B0B1;
 }
+@media (max-width: 991.8px) {
+  .form-control {
+    font-size: 3.75vw;
+    line-height: 7.5vw;
+  }
+}
 .form-submit {
   background-color: #FD2016;
   color: #fff;
@@ -307,6 +365,13 @@ a {
   margin-block: 1.3020833333vw;
   cursor: pointer;
   transition: 0.2s;
+}
+@media (max-width: 991.8px) {
+  .form-submit {
+    font-size: 3.75vw;
+    line-height: 7.5vw;
+    margin-block: 7.8125vw;
+  }
 }
 .form-submit:hover {
   background-color: #fd5049;
@@ -323,17 +388,29 @@ a {
 }
 .checkbox-input:checked + label {
   content: "";
-  padding-left: 28px;
-  line-height: 20px;
+  padding-left: 1.4583333333vw;
+  line-height: 1.0416666667vw;
   position: relative;
   cursor: pointer;
+}
+@media (max-width: 991.8px) {
+  .checkbox-input:checked + label {
+    padding-left: 8.75vw;
+    line-height: 6.25vw;
+  }
 }
 .checkbox-input:not(:checked) + label {
   display: inline-block;
   position: relative;
-  padding-left: 28px;
-  line-height: 20px;
+  padding-left: 1.4583333333vw;
+  line-height: 1.0416666667vw;
   cursor: pointer;
+}
+@media (max-width: 991.8px) {
+  .checkbox-input:not(:checked) + label {
+    padding-left: 8.75vw;
+    line-height: 6.25vw;
+  }
 }
 .checkbox-input:checked + label:before {
   content: "";
@@ -342,29 +419,51 @@ a {
   background-size: auto;
   background-position: center;
   position: absolute;
-  left: 1px;
-  top: 11px;
+  left: 0.0520833333vw;
+  top: 0.5729166667vw;
   width: 1.0416666667vw;
   height: 1.0416666667vw;
   border: none;
   background-color: #FD2016;
   border-radius: 2px;
 }
+@media (max-width: 991.8px) {
+  .checkbox-input:checked + label:before {
+    left: 0.3125vw;
+    top: 3.4375vw;
+    width: 6.25vw;
+    height: 6.25vw;
+  }
+}
 .checkbox-input:not(:checked) + label:before {
   content: "";
   position: absolute;
-  left: 1px;
-  top: 11px;
+  left: 0.0520833333vw;
+  top: 0.5729166667vw;
   width: 1.0416666667vw;
   height: 1.0416666667vw;
   border: 1px solid #fff;
   background-color: #ffffff;
-  border-radius: 2px;
+  border-radius: 0.1041666667vw;
+}
+@media (max-width: 991.8px) {
+  .checkbox-input:not(:checked) + label:before {
+    left: 0.3125vw;
+    top: 3.4375vw;
+    width: 6.25vw;
+    height: 6.25vw;
+  }
 }
 .checkbox-label {
   font-size: 0.7291666667vw;
   line-height: 0.9895833333vw;
   color: #fff;
+}
+@media (max-width: 991.8px) {
+  .checkbox-label {
+    font-size: 4.375vw;
+    line-height: 5.9375vw;
+  }
 }
 .checkbox-link {
   color: #FD2016;
@@ -969,6 +1068,18 @@ a {
 .callback__link--burger,
 .callback__call-description--burger {
   color: #2A2A2A;
+  font-size: 0.625vw;
+  line-height: 1.09375vw;
+  letter-spacing: 0.05em;
+  grid-area: de;
+  margin-right: 0.5208333333vw;
+}
+@media (max-width: 991.8px) {
+  .callback__title--burger,
+  .callback__link--burger,
+  .callback__call-description--burger {
+    font-size: 1.875vw;
+  }
 }
 
 .header__wrapper--burger {
@@ -1026,6 +1137,79 @@ a {
 
 .hidden {
   overflow: hidden;
+}
+
+.burger-social {
+  padding-top: 4.6875vw;
+}
+
+.burger-social__image {
+  background-image: url("../../image/map-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20.3125vw;
+  height: 20.3125vw;
+}
+.burger-social__image--calc {
+  background-image: url("../../image/calc-mobile.svg");
+}
+.burger-social__image--person {
+  background-image: url("../../image/person-mobile.svg");
+}
+
+.burger-social__title {
+  font-weight: 400;
+  font-size: 4.375vw;
+  line-height: 5.9375vw;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  color: #2A2A2A;
+}
+
+.burger-social__description {
+  font-weight: 800;
+  font-size: 4.375vw;
+  line-height: 5.625vw;
+  display: flex;
+  align-items: center;
+  color: #2A2A2A;
+}
+
+.burger-social__box:hover .underline__dots {
+  width: 60%;
+  background-size: 0.2083333333vw 0.1041666667vw;
+}
+@media (max-width: 991.8px) {
+  .burger-social__box:hover .underline__dots {
+    background-size: 1.25vw 0.625vw;
+  }
+}
+
+.burger-social__item {
+  gap: 5.625vw;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding-bottom: 9.375vw;
+}
+
+.burger-social__links {
+  display: flex;
+  gap: 2.1875vw;
+}
+
+.burger-social__link {
+  width: 10vw;
+  height: 10vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../../image/whatsapp.svg");
+}
+.burger-social__link--telegram {
+  background-image: url("../../image/telegram.svg");
+}
+.burger-social__link--viber {
+  background-image: url("../../image/viber.svg");
 }
 
 /*# sourceMappingURL=index.css.map */

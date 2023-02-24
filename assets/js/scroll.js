@@ -26,7 +26,7 @@ function scrollDotAfterRemove() {
 }
 
 function changeStyleHeader() {
-    window.pageYOffset > 100 ? addHeaderStyle() : removeHeaderStyle();
+    window.pageYOffset > 80 ? addHeaderStyle() : removeHeaderStyle();
 }
 
 function addHeaderStyle() {

@@ -12,6 +12,7 @@ const form = document.querySelector('.form');
 const checkboxInput = document.querySelector('.checkbox-input');
 const formInputText = document.querySelector('.form-control');
 const callbackTrigger = document.querySelector('.callback__call-description');
+const callbackTriggerBurger = document.querySelector('.callback__call-description--burger');
 const modalCallback = document.querySelector('.modal-callback');
 const modalCloseTrigger = document.querySelector(".modal-callback__box-trigger");
 const modalSuccess = document.querySelector('.modal-success');
@@ -36,7 +37,7 @@ function onFormSubmit(e) {
 document.addEventListener('click', onCallbackClick);
 function onCallbackClick(e) {
     e.stopPropagation()
-    if (e.target === callbackTrigger) {
+    if (e.target === callbackTrigger || e.target === callbackTriggerBurger) {
         modalCallbackAdd()
     }
     if (e.target === modalCallback || e.target === modalCloseTrigger) {

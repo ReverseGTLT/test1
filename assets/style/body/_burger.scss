@@ -57,6 +57,14 @@
 .callback__link--burger,
 .callback__call-description--burger {
   color: $color-text;
+  font-size: vw(12);
+  line-height: vw(21);
+  letter-spacing: 0.05em;
+  grid-area: de;
+  margin-right: vw(10);
+  @include lg {
+    font-size: vm(6);
+  }
 }
 
 .header__wrapper--burger {
@@ -113,4 +121,75 @@
 
 .hidden {
   overflow: hidden;
+}
+
+.burger-social {
+  padding-top: vm(15);
+}
+
+.burger-social__image {
+  background-image: url('../../image/map-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: vm(65);
+  height: vm(65);
+  &--calc {
+    background-image: url("../../image/calc-mobile.svg");
+  }
+  &--person {
+    background-image: url("../../image/person-mobile.svg");
+  }
+}
+
+.burger-social__title {
+  font-weight: 400;
+  font-size: vm(14);
+  line-height: vm(19);
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  color: $color-text;
+}
+
+.burger-social__description {
+  font-weight: 800;
+  font-size: vm(14);
+  line-height: vm(18);
+  display: flex;
+  align-items: center;
+  color: $color-text;
+}
+
+.burger-social__box:hover .underline__dots {
+  width: 60%;
+  background-size: vw(4) vw(2);
+  @include lg {
+    background-size: vm(4) vm(2);
+  }
+}
+
+.burger-social__item {
+  gap: vm(18);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding-bottom: vm(30);
+}
+
+.burger-social__links {
+  display: flex;
+  gap: vm(7);
+}
+
+.burger-social__link {
+  width: vm(32);
+  height: vm(32);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../image/whatsapp.svg');
+  &--telegram {
+    background-image: url('../../image/telegram.svg');
+  }
+  &--viber {
+    background-image: url('../../image/viber.svg');
+  }
 }
