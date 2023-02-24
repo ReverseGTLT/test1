@@ -64,6 +64,14 @@
       padding-top: vw(20);
     }
   }
+  &-success {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(#232323, 0.5);
+    z-index: 2;
+    position: absolute;
+    display: none;
+  }
 }
 
 .visible {
@@ -170,4 +178,29 @@
   &-link {
     color: $color-accent;
   }
+}
+ .position {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+@keyframes shake {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 0.5rem;
+  }
+  75% {
+    margin-left: -0.5rem;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+.invalid {
+  animation: shake 0.2s ease-in-out 0s 2;
+  box-shadow: 0 0 0.6rem #ff0000;
 }

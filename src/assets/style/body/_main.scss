@@ -1,0 +1,123 @@
+@use "../presets/variables" as *;
+@use "../mixin/media_mixin" as *;
+@use "../common/function" as *;
+
+.general {
+  height: vw(911);
+  //margin-bottom: vw(100);
+  background-image: url('../../image/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  width: 100%;
+  background: linear-gradient(270deg, rgba(22, 26, 30, 0) 0%, rgba(22, 26, 30, 0.6375) 79.17%);
+}
+
+.attic {
+  background: linear-gradient(180deg, rgba(22, 26, 30, 0.75) 0%, rgba(22, 26, 30, 0.2925) 36.3%);
+  height: 100%;
+  padding: vw(128) 0 0 vw(115);
+
+  &__title {
+    max-width: vw(1000);
+    font-weight: 400;
+    font-size: vw(65);
+    line-height: vw(95);
+    letter-spacing: 0.02em;
+    color: $color-white;
+    &-strong {
+      font-weight: 700;
+    }
+  }
+  &__description {
+    padding-block: vw(45);
+    font-weight: 400;
+    font-size: vw(27);
+    line-height: vw(45);
+    letter-spacing: 0.02em;
+    color: $color-white;
+  }
+  &__btn {
+    display: flex;
+    gap: vw(22);
+    &-item {
+      width: vw(400);
+      height: vw(100);
+      border-radius: 500px;
+      border: vw(1) solid rgba($color-white, 0.45);
+      background: transparent;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.2s;
+      position: relative;
+      overflow: hidden;
+      &:hover {
+        background-color: darken(rgb($color-text, 0.5), 1%);
+      }
+      &--accent {
+        background: #FD2016;
+        border: none;
+        &:hover {
+          background-color: lighten($color-accent, 10%);
+        }
+      }
+    }
+    &-description {
+      font-weight: 400;
+      font-size: vw(16);
+      line-height: vw(24);
+      letter-spacing: 0.04em;
+      color: $color-white;
+      max-width: 100%;
+      &--accent {
+        max-width: vw(225);
+      }
+    }
+    &-image {
+      width: vw(30);
+      height: vw(30);
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: 0.2s;
+      background-image: url('../../image/whatsapp-transparent.svg');
+      &--accent {
+        width: vw(22);
+        height: vw(22);
+        background-image: url('../../image/line.svg');
+      }
+    }
+  }
+}
+
+.attic__btn-item--accent:hover .attic__btn-image--accent {
+  transform: rotateZ(45deg);
+}
+//
+.attic__btn-item::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+  transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+.attic__btn-item:after, .attic__btn-item:after {
+  animation: sheen 2s forwards;
+  animation-iteration-count:infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(1em, -9em);
+  }
+}
+

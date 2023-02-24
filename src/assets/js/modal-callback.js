@@ -11,31 +11,84 @@ document.addEventListener('DOMContentLoaded', () => {
 const form = document.querySelector('.form');
 const checkboxInput = document.querySelector('.checkbox-input');
 const formInputText = document.querySelector('.form-control');
+const callbackTrigger = document.querySelector('.callback__call-description');
+const modalCallback = document.querySelector('.modal-callback');
+const modalCloseTrigger = document.querySelector(".modal-callback__box-trigger");
+const modalSuccess = document.querySelector('.modal-success');
 
 form.addEventListener('submit', onFormSubmit)
 
 function onFormSubmit(e) {
     e.preventDefault()
     if (formInputText.value.length === 16 && checkboxInput.checked ) {
-        form.submit()
-        formInputText.value = '';
+        formInputTextRemove()
+        modalCallbackRemove()
+        formInputTextEmpty()
+        modalSuccessAdd()
+        timeoutSuccess()
+        timeoutSubmit()
+    } else {
+        formInputTextAdd()
+        removeInvalid()
     }
 }
-
-const callbackTrigger = document.querySelector('.callback__call-description');
-const modalCallback = document.querySelector('.modal-callback');
-const modalCloseTrihgger = document.querySelector(".modal-callback__box-trigger");
-
 
 document.addEventListener('click', onCallbackClick);
 function onCallbackClick(e) {
     e.stopPropagation()
     if (e.target === callbackTrigger) {
-        modalCallback.classList.add('visible')
+        modalCallbackAdd()
     }
-    if (e.target === modalCallback || e.target === modalCloseTrihgger) {
-        formInputText.value = '';
-        modalCallback.classList.remove('visible')
+    if (e.target === modalCallback || e.target === modalCloseTrigger) {
+        formInputTextEmpty()
+        modalCallbackRemove()
+    }
+}
 
-    }
+function removeInvalid() {
+    setTimeout(afterShake, 1000)
+}
+
+function afterShake() {
+    formInputTextRemove()
+}
+
+function timeoutSuccess() {
+    setTimeout(function () {
+        modalSuccessRemove()
+    }, 2000)
+}
+
+function timeoutSubmit() {
+    setTimeout(function () {
+        form.submit()
+    }, 2000)
+}
+
+function modalCallbackRemove() {
+    modalCallback.classList.remove('visible')
+}
+
+function modalCallbackAdd() {
+    modalCallback.classList.add('visible')
+}
+
+function formInputTextRemove() {
+    formInputText.classList.remove('invalid')
+}
+
+function formInputTextAdd() {
+    formInputText.classList.add('invalid')
+}
+
+function formInputTextEmpty() {
+    formInputText.value = '';
+}
+
+function modalSuccessRemove() {
+    modalSuccess.classList.remove('visible')
+}
+
+function modalSuccessAdd() {
+    modalSuccess.classList.add('visible')
 }

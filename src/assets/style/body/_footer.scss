@@ -1,0 +1,49 @@
+@use "../presets/variables" as *;
+@use "../mixin/media_mixin" as *;
+@use "../common/function" as *;
+
+.basement {
+  position: relative;
+  margin-bottom: vw(150);
+}
+
+.footer {
+  position: absolute;
+  top: vw(-174);
+  left: vw(115);
+  &__wrapper {
+    display: flex;
+
+  }
+  &__item {
+      padding-inline: vw(95);
+      padding-bottom: vw(34);
+    &-image {
+      width: vw(14);
+      height: vw(10);
+      background-image: url('../../image/done-orange.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: vw(22);
+    }
+    &-title {
+      font-weight: 300;
+      font-size: vw(17);
+      line-height: vw(27);
+      letter-spacing: 0.02em;
+      color: $color-white;
+      min-width: vw(150);
+    }
+    &-strong {
+      font-weight: 800;
+    }
+  }
+}
+
+.footer__item:not(:last-child) {
+  border-right: vw(1) solid rgba($color-white, 0.25);
+}
+
+.footer__item:first-child {
+  padding-left: 0;
+}

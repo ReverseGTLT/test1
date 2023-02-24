@@ -10,11 +10,12 @@
     <script defer src="assets/js/mask.js"></script>
     <script defer src="assets/js/modal-map.js"></script>
     <script defer src="assets/js/modal-callback.js"></script>
+    <script defer src="assets/js/scroll.js"></script>
     <script defer src="assets/js/index.js"></script>
-    <title>Document</title>
+    <title>Test</title>
 </head>
 <body>
-    <section class="page-wrapper">
+    <div class="page-wrapper">
         <div class="modal-google">
             <iframe class="modal-google__map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1881.7300220683403!2d37.51575038245189!3d55.884062512750646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0JDQtNGA0LXRgSDQsNCy0YLQvtGG0LXQvdGC0YDQsDog0JzQvtGB0LrQstCwLCDQqNC-0YHRgdC10LnQvdGL0Lkg0L_RgNC-0LXQt9C0LCDRgTQg0LAvMg!5e0!3m2!1sru!2sge!4v1677166492208!5m2!1sru!2sge"
                     style="border:0;"
@@ -28,7 +29,7 @@
                 <p class="modal-callback__title">Быстро оставить заявку</p>
                 <p class="modal-callback__description">Введите номер — позвоним вам
                     в течение 5-10 минут в рабочее время</p>
-                <form action="" class="modal-callback__form form">
+                <form class="modal-callback__form form">
                     <label class="form-label" for="phone">Введите ваш номер телефона</label>
                     <input id="phone" type="text" class="form-control form-btn" placeholder="+ 7 (_ _ _) _ _ _ - _ _ - _ _">
                     <button class="form-submit form-btn" type="submit">Перезвоните мне</button>
@@ -41,12 +42,24 @@
                 </form>
             </div>
         </div>
+        <div class="modal-success">
+            <div class="modal-callback__box position">
+                <p class="modal-callback__title">Заявка отправлена!</p>
+            </div>
+        </div>
         <div class="container">
-            <div class="scroll"></div>
+            <div class="scroll">
+                <p class="scroll__description">Scroll down</p>
+                <div class="scroll__btn">
+                    <div class="scroll__btn-dot">
+                        <div class="scroll__btn-after"></div>
+                    </div>
+                </div>
+            </div>
             <header class="header">
                 <div class="header__wrapper">
                     <div class="header__logo">
-                        <div class="header__logo-image"></div>
+                        <a href="index.html"><div class="header__logo-image"></div></a>
                         <p class="header__logo-description">Ремонтируем двигатели
                             Hyundai и Kia с 2012 года </p>
                     </div>
@@ -115,7 +128,7 @@
                     </div>
                 </div>
                 <nav class="navbar">
-                    <menu class="menu">
+                    <div class="menu">
                         <ul class="menu__list">
                             <li class="menu__list-item"><a href="" class="menu__list-link">Главная</a></li>
                             <li class="menu__list-item"><a href="" class="menu__list-link">услуги</a></li>
@@ -127,10 +140,54 @@
                             <li class="menu__list-item"><a href="" class="menu__list-link">о компании</a></li>
                             <li class="menu__list-item"><a href="" class="menu__list-link">Контакты</a></li>
                         </ul>
-                    </menu>
+                    </div>
                 </nav>
             </header>
         </div>
-    </section>
+    </div>
+    <div class="general container">
+        <main class="main">
+            <div class="attic">
+                <h1 class="attic__title">Профессиональный <span class="attic__title-strong">ремонт двигателей </span>
+                    HYUNDAI и KIA
+                    <br> с <span class="attic__title-strong">гарантией 1 год</span> за 4-7 дней
+                </h1>
+                <h2 class="attic__description">в специализированном автосервисе полного цикла</h2>
+                <div class="attic__btn">
+                    <a href="#" class="attic__btn-item attic__btn-item--accent">
+                        <p class="attic__btn-description attic__btn-description--accent">Начать расчет стоимости ремонта вашего двигателя</p>
+                        <div class="attic__btn-image attic__btn-image--accent"></div>
+                    </a>
+                    <a href="#" class="attic__btn-item">
+                        <div class="attic__btn-image"></div>
+                        <p class="attic__btn-description">Узнайте стоимость по WhatsApp</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="basement container">
+        <footer class="footer">
+            <div class="footer__wrapper">
+                <div class="footer__item">
+                    <div class="footer__item-image"></div>
+                    <p class="footer__item-title"><span class="footer__item-strong">Без предоплаты</span>.
+                        Оплата после ремонта</p>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-image"></div>
+                    <p class="footer__item-title"><span class="footer__item-strong">Работаем официально</span> с оформлением заказ-нарядов и чеков</p>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-image"></div>
+                    <p class="footer__item-title"><span class="footer__item-strong">Оригинальные запчасти</span></p>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-image"></div>
+                    <p class="footer__item-title"><span class="footer__item-strong">Лучшие цены на рынке</span> благодаря прямым поставкам запчастей и собственному цеху механической обработки</p>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

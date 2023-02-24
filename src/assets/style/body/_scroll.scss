@@ -3,6 +3,71 @@
 @use "../common/function" as *;
 
 .scroll {
-  //width: vw(140);
+  position: absolute;
   height: 100%;
+  top: vw(180);
+  left: vw(50);
+  &::after {
+    position: absolute;
+    content: '';
+    border-bottom: vw(1) solid $color-scroll;
+    height: vw(2);
+    width: vw(500);
+    transform: rotateZ(90deg);
+    top: vw(400);
+    left: vw(-237);
+  }
+  &__description {
+    writing-mode: vertical-lr;
+    transform: rotateZ(180deg);
+    font-weight: 700;
+    font-size: vw(16);
+    line-height: vw(25);
+    letter-spacing: 0.1em;
+    color: $color-scroll;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  &__btn {
+    width: vw(18);
+    height: vw(32);
+    border: vw(1) solid $color-scroll;
+    border-radius: vw(10);
+    position: relative;
+    margin-left: vw(3);
+    margin-top: vw(600);
+    cursor: pointer;
+    &:hover {
+      background-color: rgba($color-accent, 0.2);
+    }
+    &-after {
+      position: absolute;
+      content: '';
+      width: vw(4);
+      height: vw(4);
+      border-radius: 50%;
+      border: vw(1) solid $color-accent;
+      top: vw(5);
+      left: vw(6);
+      transition: 0.2s;
+      //5
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      width: vw(8);
+      height: vw(1);
+      border-bottom: vw(1) solid $color-scroll;
+      left: vw(6);
+      top: vw(-6);
+      transform: rotateZ(90deg);
+    }
+  }
+}
+
+.scroll-down {
+  top: vw(20);
 }
