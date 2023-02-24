@@ -48,9 +48,10 @@ a {
   .header {
     height: 17.1875vw;
     position: fixed;
-    width: 100%;
     transition: 0.6s;
     padding: 5vw 0 0 7.8125vw;
+    right: 0;
+    left: 0;
   }
 }
 .header__wrapper {

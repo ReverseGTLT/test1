@@ -21,9 +21,10 @@
   @include lg {
     height: vm(55);
     position: fixed;
-    width: 100%;
     transition: 0.6s;
     padding: vm(16) 0 0 vm(25);
+    right: 0;
+    left: 0;
   }
   &__wrapper {
     display: flex;
