@@ -1,3 +1,7 @@
+@use "../presets/variables" as *;
+@use "../mixin/media_mixin" as *;
+@use "../common/function" as *;
+
 *,
 *::before,
 *::after {
@@ -13,6 +17,9 @@ html {
 body {
   font-family: 'Manrope', sans-serif;
   font-weight: 400;
+  @include lg {
+    //width: vw(320);
+  }
 }
 
 ul {

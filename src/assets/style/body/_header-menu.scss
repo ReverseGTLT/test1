@@ -12,6 +12,9 @@
     gap: vw(90);
     padding-top: vw(28);
     padding-bottom: vw(24);
+    @include lg {
+      display: none;
+    }
     &-item {}
     &-link {
       text-transform: uppercase;

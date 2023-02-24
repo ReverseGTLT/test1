@@ -1,8 +1,10 @@
 const scrollBtn = document.querySelector('.scroll__btn');
 const scrollDotAfter = document.querySelector('.scroll__btn-after');
+const header = document.querySelector('.header');
 
 scrollBtn.addEventListener('click', goTop);
-document.addEventListener('scroll', changeStyleScrollDot)
+document.addEventListener('scroll', changeStyleScrollDot);
+document.addEventListener('scroll', changeStyleHeader);
 
 function goTop() {
     if (window.pageYOffset > 0) {
@@ -21,4 +23,16 @@ function scrollDotAfterAdd() {
 
 function scrollDotAfterRemove() {
     scrollDotAfter.classList.remove('scroll-down')
+}
+
+function changeStyleHeader() {
+    window.pageYOffset > 100 ? addHeaderStyle() : removeHeaderStyle();
+}
+
+function addHeaderStyle() {
+    header.classList.add('fixed-color')
+}
+
+function removeHeaderStyle() {
+    header.classList.remove('fixed-color')
 }

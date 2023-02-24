@@ -8,6 +8,12 @@
   background-image: url('../../image/bg.png');
   background-repeat: no-repeat;
   background-size: cover;
+  @include lg {
+    background-position-x: vm(-500);
+    background-position-y: vm(0);
+    height: vm(600);
+    background-image: url('../../image/bg-mobile.png');
+  }
 }
 
 .main {
@@ -19,6 +25,9 @@
   background: linear-gradient(180deg, rgba(22, 26, 30, 0.75) 0%, rgba(22, 26, 30, 0.2925) 36.3%);
   height: 100%;
   padding: vw(128) 0 0 vw(115);
+  @include lg {
+    padding: vm(95) 0 0 vm(25);
+  }
 
   &__title {
     max-width: vw(1000);
@@ -27,8 +36,17 @@
     line-height: vw(95);
     letter-spacing: 0.02em;
     color: $color-white;
+    @include lg {
+      font-size: vm(20);
+      line-height: vm(29);
+      max-width: vm(220);
+    }
     &-strong {
       font-weight: 700;
+      @include lg {
+        font-size: vm(20);
+        line-height: vm(29);
+      }
     }
   }
   &__description {
@@ -38,10 +56,24 @@
     line-height: vw(45);
     letter-spacing: 0.02em;
     color: $color-white;
+    @include lg {
+      padding-block: vm(28);
+      max-width: vm(220);
+      font-size: vm(12);
+      line-height: vm(18);
+      color: $color-white;
+    }
   }
   &__btn {
     display: flex;
     gap: vw(22);
+    @include lg {
+      flex-direction: column;
+      align-items: center;
+      gap: vm(15);
+      padding-top: vm(29);
+      padding-right: vm(25);
+    }
     &-item {
       width: vw(400);
       height: vw(100);
@@ -56,6 +88,10 @@
       transition: 0.2s;
       position: relative;
       overflow: hidden;
+      @include lg {
+        width: vm(276);
+        height: vm(60);
+      }
       &:hover {
         background-color: darken(rgb($color-text, 0.5), 1%);
       }
@@ -74,8 +110,22 @@
       letter-spacing: 0.04em;
       color: $color-white;
       max-width: 100%;
+      @include lg {
+        font-weight: 600;
+        font-size: vm(10);
+        line-height: vm(15);
+        text-align: center;
+      }
       &--accent {
         max-width: vw(225);
+        @include lg {
+          max-width: vm(190);
+        }
+      }
+      span {
+        @include lg {
+          color: $color-whatsapp-span;
+        }
       }
     }
     &-image {
@@ -85,6 +135,9 @@
       background-size: cover;
       transition: 0.2s;
       background-image: url('../../image/whatsapp-transparent.svg');
+      @include lg {
+        display: none;
+      }
       &--accent {
         width: vw(22);
         height: vw(22);

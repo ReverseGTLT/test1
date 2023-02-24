@@ -11,13 +11,28 @@
   position: absolute;
   top: vw(-174);
   left: vw(115);
+  @include lg {
+    position: initial;
+    width: 100%;
+    padding: vm(25);
+  }
   &__wrapper {
     display: flex;
-
+    @include lg {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: vm(15);
+      margin-inline: auto;
+      justify-content: center;
+    }
   }
   &__item {
       padding-inline: vw(95);
       padding-bottom: vw(34);
+    @include lg {
+      padding-inline: 0;
+      padding-bottom: 0;
+    }
     &-image {
       width: vw(14);
       height: vw(10);
@@ -25,6 +40,10 @@
       background-repeat: no-repeat;
       background-size: cover;
       margin-bottom: vw(22);
+      @include lg {
+        width: vm(14);
+        height: vm(10);
+      }
     }
     &-title {
       font-weight: 300;
@@ -33,9 +52,19 @@
       letter-spacing: 0.02em;
       color: $color-white;
       min-width: vw(150);
+      @include lg {
+        font-weight: 400;
+        font-size: vm(10);
+        line-height: vm(15);
+        color: $color-footer-title;
+
+      }
     }
     &-strong {
       font-weight: 800;
+      @include lg {
+        font-weight: 700;
+      }
     }
   }
 }

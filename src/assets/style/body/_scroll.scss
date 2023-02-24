@@ -7,6 +7,9 @@
   height: 100%;
   top: vw(180);
   left: vw(50);
+  @include lg {
+    display: none;
+  }
   &::after {
     position: absolute;
     content: '';
