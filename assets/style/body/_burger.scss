@@ -3,15 +3,18 @@
 @use "../common/function" as *;
 
 .burger {
-  width: vm(15);
-  height: vm(15);
-  position: absolute;
-  right: vm(-35);
-  top: vm(25);
-  background-image: url('../../image/burger.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
+  width: 0;
+  height: 0;
+  @include lg {width: vm(15);
+    display: block;
+    height: vm(15);
+    position: absolute;
+    right: vm(-35);
+    top: vm(25);
+    background-image: url('../../image/burger.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;}
 }
 
 .burger--black {

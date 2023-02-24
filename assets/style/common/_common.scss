@@ -1,6 +1,6 @@
 @use "../presets/variables" as *;
 @use "../mixin/media_mixin" as *;
-@use "../common/function" as *;
+@use "function" as *;
 
 *,
 *::before,

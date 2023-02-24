@@ -918,15 +918,22 @@ a {
 }
 
 .burger {
-  width: 4.6875vw;
-  height: 4.6875vw;
-  position: absolute;
-  right: -10.9375vw;
-  top: 7.8125vw;
-  background-image: url("../../image/burger.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+@media (max-width: 991.8px) {
+  .burger {
+    width: 4.6875vw;
+    display: block;
+    height: 4.6875vw;
+    position: absolute;
+    right: -10.9375vw;
+    top: 7.8125vw;
+    background-image: url("../../image/burger.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+  }
 }
 
 .burger--black {
