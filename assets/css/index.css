@@ -293,7 +293,7 @@ a {
   width: 100vw;
   height: 100vh;
   background-color: rgba(35, 35, 35, 0.5);
-  z-index: 2;
+  z-index: 10;
   position: absolute;
   display: none;
 }
@@ -1042,7 +1042,7 @@ a {
   width: 4.6875vw;
   height: 4.6875vw;
   position: absolute;
-  right: -10.9375vw;
+  right: 9.375vw;
   top: 7.8125vw;
   background-image: url("../../image/burger-black.svg");
 }
@@ -1056,16 +1056,15 @@ a {
   bottom: 0;
   width: 100vw; /* viewport width */
   height: 100vh; /* viewport height */
-  overflow: auto;
 }
 
 .modal-burger__wrapper {
   display: flex;
   gap: 2.5vw;
+  margin-left: -25vw;
 }
 
 .callback__title--burger,
-.callback__link--burger,
 .callback__call-description--burger {
   color: #2A2A2A;
   font-size: 0.625vw;
@@ -1076,16 +1075,25 @@ a {
 }
 @media (max-width: 991.8px) {
   .callback__title--burger,
-  .callback__link--burger,
   .callback__call-description--burger {
     font-size: 1.875vw;
   }
+}
+
+.callback__link--burger {
+  font-weight: 700;
+  font-size: 3.75vw;
+  line-height: 3.125vw;
+  color: #2A2A2A;
 }
 
 .header__wrapper--burger {
   display: flex;
   flex-direction: column;
   border-bottom: none;
+  overflow-x: scroll;
+  height: 100%;
+  width: 100vw;
 }
 
 .burger-contacts__link {
@@ -1104,7 +1112,7 @@ a {
 }
 
 .burger-contacts {
-  margin-left: -7.8125vw;
+  margin-left: -27.5vw;
 }
 
 .burger-contacts__list {
@@ -1141,6 +1149,7 @@ a {
 
 .burger-social {
   padding-top: 4.6875vw;
+  padding-right: 7.8125vw;
 }
 
 .burger-social__image {
@@ -1196,6 +1205,7 @@ a {
 .burger-social__links {
   display: flex;
   gap: 2.1875vw;
+  padding-top: 3.125vw;
 }
 
 .burger-social__link {
