@@ -23,7 +23,7 @@
   cursor: pointer;
   width: vm(15);
   height: vm(15);
-  position: absolute;
+  position: fixed;
   right: vm(30);
   top: vm(25);
   background-image: url('../../image/burger-black.svg');
@@ -43,9 +43,13 @@
 
 
 .modal-burger__wrapper {
+  padding-top: vm(18);
+  padding-left: vm(40);
   display: flex;
-  gap: vm(8);
-  margin-left: vm(-80);
+  gap: 2.5vw;
+  margin-left: -25vw;
+  position: fixed;
+  background-color: #fff;
 }
 
 .callback__title--burger,
@@ -76,7 +80,7 @@
   overflow-x: scroll;
   height: 100%;
   width: 100vw;
-  padding: vm(16) 0 0 vm(25);
+  //padding: vm(16) 0 0 vm(25);
 }
 
 .burger-contacts__link {
@@ -95,7 +99,8 @@
 }
 
 .burger-contacts {
-  margin-left: vm(-88);
+  margin-left: vm(-68);
+  margin-top: vm(60);
 }
 
 .burger-contacts__list {
@@ -132,6 +137,7 @@
 .burger-social {
   padding-top: vm(15);
   padding-right: vm(25);
+  padding-left: vm(25);
 }
 
 .burger-social__image {

@@ -16,6 +16,7 @@ const callbackTriggerBurger = document.querySelector('.callback__call-descriptio
 const modalCallback = document.querySelector('.modal-callback');
 const modalCloseTrigger = document.querySelector(".modal-callback__box-trigger");
 const modalSuccess = document.querySelector('.modal-success');
+const body = document.querySelector('body');
 
 form.addEventListener('submit', onFormSubmit)
 
@@ -39,10 +40,12 @@ function onCallbackClick(e) {
     e.stopPropagation()
     if (e.target === callbackTrigger || e.target === callbackTriggerBurger) {
         modalCallbackAdd()
+        addOverflowHidden()
     }
     if (e.target === modalCallback || e.target === modalCloseTrigger) {
         formInputTextEmpty()
         modalCallbackRemove()
+        removeOverflowHidden()
     }
 }
 
@@ -92,4 +95,12 @@ function modalSuccessRemove() {
 
 function modalSuccessAdd() {
     modalSuccess.classList.add('visible')
+}
+
+function addOverflowHidden() {
+    body.classList.add('overflow')
+}
+
+function removeOverflowHidden() {
+    body.classList.remove('overflow')
 }
