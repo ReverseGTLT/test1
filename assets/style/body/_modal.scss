@@ -21,7 +21,7 @@
     height: 100vh;
     background-color: rgba(#232323, 0.5);
     z-index: 10;
-    position: absolute;
+    position: fixed;
     display: none;
     &__box {
       padding-top: vw(40);
